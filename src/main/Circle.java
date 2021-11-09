@@ -1,8 +1,10 @@
 package main;
 
 public class Circle implements IShape{
-    double radius;
+    private double radius;
     public Circle(double radius){
+        if(radius <= 0.0)
+            throw new ShapeException("Not valid Circle!");
         this.radius = radius;
     }
 
