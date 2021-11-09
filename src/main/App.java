@@ -23,18 +23,33 @@ public class App {
             buffer = scanner.next();
             if(buffer.equals("c")){
                 doubleBuffer = scanner.nextDouble();
-                shapeList.add(new Circle(doubleBuffer));
+                try{
+                    shapeList.add(new Circle(doubleBuffer));
+                }catch(ShapeException e){
+                    System.out.println(e.getMessage());
+                    return;
+                }
             }else if(buffer.equals("r")){
                 double length = scanner.nextDouble();
                 double width = scanner.nextDouble();
-                shapeList.add(new Rectangle(length, width));
+                try{
+                    shapeList.add(new Rectangle(length, width));
+                }catch(ShapeException e){
+                    System.out.println(e.getMessage());
+                    return;
+                }
             }else if(buffer.equals("t")){
                 double a,b,c;
                 a=scanner.nextDouble();
                 b=scanner.nextDouble();
                 c= scanner.nextDouble();
-                shapeList.add(new Triangle(a,b,c));
-            }else break;
+                try{
+                    shapeList.add(new Triangle(a,b,c));
+                }catch(ShapeException e){
+                    System.out.println(e.getMessage());
+                    return;
+                }
+            }else return;
         }
 
         ShapeSort shapeSort = new ShapeSort();
