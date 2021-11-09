@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -8,7 +9,7 @@ public class App {
         int shapeCount;
         String characteristic;
         String order;
-        ArrayList<IShape>shapeList = new ArrayList<IShape>();
+        List<IShape>shapeList = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
 

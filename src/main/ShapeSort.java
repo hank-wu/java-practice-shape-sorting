@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 class AscAreaComparator implements Comparator<IShape>{
     @Override
@@ -39,8 +40,8 @@ class DescPerimeterComparator implements Comparator<IShape>{
 }
 
 public class ShapeSort {
-    ArrayList<IShape>shapeList;
-    public void setList(ArrayList<IShape>shapeList){
+    List<IShape> shapeList;
+    public void setList(List<IShape>shapeList){
         this.shapeList = shapeList;
     }
 
